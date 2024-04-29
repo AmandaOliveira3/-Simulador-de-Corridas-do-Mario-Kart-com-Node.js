@@ -141,13 +141,13 @@ async function playRaceEngine(character1, character2) {
             //quem vence o confronto ganha um turbo (+ 1ponto) aleatoriamente
 
             if (powerResult1 > powerResult2 && character2.PONTOS > 0) {
-                console.log(`${character1.NOME} venceu o confronto! ${character2.NOME} perdeu 1 ponto `);
+                console.log(`${character1.NOME} venceu o confronto!`);
                 await awardRandomTurbo(character1);
                 await getRandomItem(character2);
             }
 
             if (powerResult2 > powerResult1 && character1.PONTOS > 0) {
-                console.log(`${character2.NOME} venceu o confronto ${character1.NOME} perdeu 1 ponto `);
+                console.log(`${character2.NOME} venceu o confronto`);
                 await awardRandomTurbo(character2);
                 await getRandomItem(character1);
             }
